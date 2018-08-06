@@ -16,10 +16,14 @@ def cerradas():
     sheet =  NAME_FILE['Cerradas']
     DIA_ONE = 1
     DIA_TWO = 2
-
-    filepath_cerrradas = r'C:\Users\usr1CR\.PyCharmCE2018.2\proyects\probando_jinja2\probando_jinja2\Automatizacion_UCC\excel\Cerradas.xlsx'
-    wb = openpyxl.Workbook()
-    wb.save(filepath_cerrradas)
+    try:
+        filepath_cerrradas = r'C:\Users\usr1CR\.PyCharmCE2018.2\proyects\probando_jinja2\probando_jinja2\Automatizacion_UCC\excel\Cerradas.xlsx'
+        wb = openpyxl.Workbook()
+        wb.save(filepath_cerrradas)
+    except:
+        print("******************************************************\n")
+        print("Cerrar archivo Cerradas.xlsx y despues ejecutar el programa\n")
+        print("******************************************************\n")
 
     FILEPATH_Cerradas = openpyxl.load_workbook(r'C:\Users\usr1CR\.PyCharmCE2018.2\proyects\probando_jinja2\probando_jinja2\Automatizacion_UCC\excel\Cerradas.xlsx')
 
@@ -683,9 +687,14 @@ def abiertas():
     NAME_FILE = openpyxl.load_workbook(r'C:\Users\usr1CR\.PyCharmCE2018.2\proyects\probando_jinja2\probando_jinja2\Automatizacion_UCC\excel\Prueba.xlsx')
     sheet = NAME_FILE['Abiertas']
 
-    filepath_abiertas = r'C:\Users\usr1CR\.PyCharmCE2018.2\proyects\probando_jinja2\probando_jinja2\Automatizacion_UCC\excel\Abiertas.xlsx'
-    wb = openpyxl.Workbook()
-    wb.save(filepath_abiertas)
+    try:
+        filepath_abiertas = r'C:\Users\usr1CR\.PyCharmCE2018.2\proyects\probando_jinja2\probando_jinja2\Automatizacion_UCC\excel\Abiertas.xlsx'
+        wb = openpyxl.Workbook()
+        wb.save(filepath_abiertas)
+    except:
+        print("******************************************************\n")
+        print("Cerrar archivo Abiertas.xlsx y despues ejecutar el programa\n")
+        print("******************************************************\n")
 
     FILEPATH_Abiertas = openpyxl.load_workbook(r'C:\Users\usr1CR\.PyCharmCE2018.2\proyects\probando_jinja2\probando_jinja2\Automatizacion_UCC\excel\Abiertas.xlsx')
 
