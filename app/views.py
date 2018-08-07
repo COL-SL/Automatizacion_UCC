@@ -682,6 +682,7 @@ def cerradas():
                     month_actual_excel = cadena[5:7]
                     day_actual_excel = int(day_actual_excel)
                     day_open = sheet[column_name_r].value
+                    print (day_open)
                     time_total_open = str(my_date_actual_compare_with_excel - day_open)
                     #print (time_total_open[0:2])
                     #print("Month Actual", month_actual_excel)
@@ -715,7 +716,10 @@ def cerradas():
                     month_actual_excel = cadena[5:7]
                     day_actual_excel = int(day_actual_excel)
                     day_open = sheet[column_name_r].value
-                    time_total_open = str(my_date_actual_compare_with_excel - day_open)
+                    if (day_open != None):
+                        time_total_open = str(my_date_actual_compare_with_excel - day_open)
+                    else:
+                        time_total_open = 0
                     # print (day_actual_excel)
                     # print("Month Actual", month_actual_excel)
                     day_actual_excel_compare = my_date_actual_compare_with_excel.strftime('%d')
